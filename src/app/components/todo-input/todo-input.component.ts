@@ -21,15 +21,18 @@ export class TodoInputComponent {
   }
 
  addTodo() : void {
-  this.getTodos();
-  let todo : Todo = {id: this.currentId ,title: this.title, status: false , isFav : false};
-  let user = this.users.find((user) => user.id === Number(this.userId));
-  this.todos.push(todo);
-  //@ts-ignore
+  if(this.title){
+    this.getTodos();
+    let todo : Todo = {id: this.currentId ,title: this.title, status: false , isFav : false};
+    let user = this.users.find((user) => user.id === Number(this.userId));
+    this.todos.push(todo);
+    //@ts-ignore
   user.todos = this.todos;
   //@ts-ignore
   this.users[this.users.findIndex((user) => user.id === Number(this.userId))] = user;
   localStorage.setItem('users', JSON.stringify(this.users));
+    this.title = '';
+  }
  }
  changeStatus(id : number): void {
   let index: number = this.todos.findIndex((obj => obj.id == id));
