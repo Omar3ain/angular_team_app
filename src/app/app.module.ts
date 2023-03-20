@@ -7,6 +7,7 @@ import { TodoInputComponent } from './components/todo-input/todo-input.component
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
     TodoInputComponent,
     LoginComponent,
     TodoItemComponent,
+    NavbarComponent,
   ],
   imports: [
     FormsModule,
