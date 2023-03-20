@@ -2,7 +2,7 @@
   <!-- Email input -->
   <div class="form-outline mb-4">
     <label class="form-label" for="form2Example1">Username</label>
-    <input type="email" id="form2Example1" class="form-control" placeholder="Enter your username" />
+    <input [(ngModel)]="name" type="email" id="form2Example1" class="form-control" placeholder="Enter your username" />
   </div>
 
   <!-- Password input -->
@@ -28,7 +28,7 @@
   </div>
 
   <!-- Submit button -->
-  <button type="button" class="btn btn-primary btn-block mb-4 m-auto">Sign in</button>
+  <button class="btn btn-primary btn-block mb-4 m-auto">Sign in</button>
 
   <!-- Register buttons -->
   <!-- <div class="text-center">
