@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { TodoInputComponent } from './components/todo-input/todo-input.component';
 
 const routes: Routes = [
+  {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'todos' , component : TodoInputComponent},
 ];
