@@ -10,13 +10,15 @@ export class TodoInputComponent {
   title: string ='';
   todos: Todo[] = [];
   currentId :number = 0;
-
  addTodo() : void {
-  this.getTodos();
-  let todo : Todo = {id: this.currentId ,title: '', status: false};
-  todo.title = this.title;
-  this.todos.push(todo);
-  localStorage.setItem('todos', JSON.stringify(this.todos));
+  if(this.title){
+    this.getTodos();
+    let todo : Todo = {id: this.currentId ,title: '', status: false};
+    todo.title = this.title;
+    this.todos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(this.todos));
+    this.title = '';
+  }
  }
  changeStatus(id : number): void {
   let index: number = this.todos.findIndex((obj => obj.id == id));
