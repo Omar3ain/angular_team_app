@@ -3,14 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoInputComponent } from './todo-input/todo-input.component';
+import { TodoInputComponent } from './components/todo-input/todo-input.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { TodoItemComponent } from './components/todo-item/todo-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoInputComponent,
+    LoginComponent,
+    TodoItemComponent,
   ],
   imports: [
     FormsModule,
