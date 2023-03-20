@@ -4,9 +4,9 @@ import { LoginComponent } from './components/login/login.component';
 import { TodoInputComponent } from './components/todo-input/todo-input.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
+  {path: '', redirectTo: 'login' ,pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  {path: 'todos' , component : TodoInputComponent},
+  {path: 'todos/:id' , component : TodoInputComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

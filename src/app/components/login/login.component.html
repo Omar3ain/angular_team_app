@@ -2,13 +2,13 @@
   <!-- Email input -->
   <div class="form-outline mb-4">
     <label class="form-label" for="form2Example1">Username</label>
-    <input [(ngModel)]="user.name" type="email" id="form2Example1" class="form-control" placeholder="Enter your username" />
+    <input name="username" [(ngModel)]="user.name" type="email" id="form2Example1" class="form-control" placeholder="Enter your username" />
   </div>
 
   <!-- Password input -->
   <div class="form-outline mb-4">
     <label class="form-label" for="form2Example2">Qoute</label>
-    <textarea type="Text" id="form2Example2" class="form-control" placeholder="Enter your favoute quote"></textarea>
+    <textarea name="qoute" [(ngModel)]="user.qoute" type="Text" id="form2Example2" class="form-control" placeholder="Enter your favoute quote"></textarea>
   </div>
 
   <!-- 2 column grid layout for inline styling -->
@@ -28,7 +28,7 @@
   </div>
 
   <!-- Submit button -->
-  <button class="btn btn-primary btn-block mb-4 m-auto">Sign in</button>
+  <button (click)="loginUser()" class="btn btn-primary btn-block mb-4 m-auto">Sign in</button>
 
   <!-- Register buttons -->
   <!-- <div class="text-center">

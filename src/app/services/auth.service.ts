@@ -5,7 +5,7 @@ import User from './userInterface';
   providedIn: 'root'
 })
 export class AuthService {
-  user : User[] = []
-  
+
+  users : User[]  = JSON.parse(localStorage.getItem('users') as string) || [];  
   constructor() { }
 }
