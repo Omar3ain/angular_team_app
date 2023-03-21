@@ -20,8 +20,12 @@ export class TodoInputComponent {
   //@ts-ignore
   user : User;
   constructor(private _activatedRoute: ActivatedRoute , private _authService: AuthService){
-    this.userId = _activatedRoute.snapshot.params['id'];
+    this.userId = Number(_activatedRoute.snapshot.params['id']);
     this.users = _authService.users;
+    //@ts-ignore
+    this.user = this.users.find((user) => user.id === this.userId);
+    
+    
   }
 
  addTodo() : void {
