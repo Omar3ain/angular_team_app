@@ -15,11 +15,12 @@ export class NavbarComponent {
   userId:number=0;
   todos : Todo[]=[];
   name :string='random';
-
+  user : User ;
   constructor(private _activatedRoute:ActivatedRoute,private _authService: AuthService){
-    this.userId = _activatedRoute.snapshot.params['id'];
+    this.userId = Number(_activatedRoute.snapshot.params['id']);
     this.users = _authService.users;
-    this.name=this.users[this.userId].name;
+    //@ts-ignore
+    this.user = this.users.find((user) => user.id === this.userId)
     //@ts-ignore
     this.todos= this.users.find(u => u.id === Number(this.userId)).todos;
   }

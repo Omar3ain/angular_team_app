@@ -3,4 +3,5 @@ export default interface Todo {
   title : string;
   status : boolean;
   isFav : boolean;
+  isDeleted : boolean
 }
