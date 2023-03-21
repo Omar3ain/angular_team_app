@@ -10,14 +10,20 @@ import  Todo  from '../../services/todoInterface';
   styleUrls: ['./todo-input.component.css']
 })
 export class TodoInputComponent {
+
   title: string ='';
   todos: Todo[] = [];
   currentId :number = 0;
   users :User[]= [];
   userId :number = 0;
+  user:User;
   constructor(private _activatedRoute: ActivatedRoute , private _authService: AuthService){
-    this.userId = _activatedRoute.snapshot.params['id'];
+    this.userId = Number(_activatedRoute.snapshot.params['id']);
     this.users = _authService.users;
+    //@ts-ignore
+    this.user = this.users.find((user) => user.id === this.userId);
+    
+    
   }
 
  addTodo() : void {
