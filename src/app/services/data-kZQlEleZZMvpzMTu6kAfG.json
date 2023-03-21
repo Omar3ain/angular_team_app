@@ -4,7 +4,11 @@
     "phone": "01 66 54 77 32",
     "email": "accumsan.neque@aol.net"
   },
-  { "name": "Isabella", "phone": "03 43 24 22 91", "email": "eu.eros@aol.net" },
+  {
+    "name": "Isabella",
+    "phone": "03 43 24 22 91",
+    "email": "eu.eros@aol.net"
+  },
   {
     "name": "Gemma",
     "phone": "08 86 12 68 65",
@@ -25,7 +29,11 @@
     "phone": "04 77 58 49 33",
     "email": "mattis.integer@outlook.ca"
   },
-  { "name": "Jane", "phone": "05 36 65 86 16", "email": "ac.urna.ut@aol.ca" },
+  {
+    "name": "Jane",
+    "phone": "05 36 65 86 16",
+    "email": "ac.urna.ut@aol.ca"
+  },
   {
     "name": "Upton",
     "phone": "04 62 52 69 08",
@@ -126,13 +134,21 @@
     "phone": "02 73 68 37 86",
     "email": "iaculis.enim@icloud.net"
   },
-  { "name": "Kyle", "phone": "07 79 17 76 54", "email": "per@yahoo.com" },
+  {
+    "name": "Kyle",
+    "phone": "07 79 17 76 54",
+    "email": "per@yahoo.com"
+  },
   {
     "name": "Garrett",
     "phone": "07 37 76 38 88",
     "email": "dapibus@outlook.com"
   },
-  { "name": "May", "phone": "09 65 85 35 24", "email": "amet@yahoo.edu" },
+  {
+    "name": "May",
+    "phone": "09 65 85 35 24",
+    "email": "amet@yahoo.edu"
+  },
   {
     "name": "Delilah",
     "phone": "09 84 57 54 38",
@@ -148,8 +164,16 @@
     "phone": "04 83 23 33 58",
     "email": "dui.fusce@hotmail.edu"
   },
-  { "name": "Colin", "phone": "07 61 34 98 05", "email": "a@protonmail.org" },
-  { "name": "Quyn", "phone": "04 38 02 46 98", "email": "ac@outlook.edu" },
+  {
+    "name": "Colin",
+    "phone": "07 61 34 98 05",
+    "email": "a@protonmail.org"
+  },
+  {
+    "name": "Quyn",
+    "phone": "04 38 02 46 98",
+    "email": "ac@outlook.edu"
+  },
   {
     "name": "Evangeline",
     "phone": "06 58 73 77 82",
@@ -175,7 +199,11 @@
     "phone": "05 62 65 04 57",
     "email": "adipiscing.enim@google.net"
   },
-  { "name": "Alea", "phone": "06 58 50 25 80", "email": "nisi@google.org" },
+  {
+    "name": "Alea",
+    "phone": "06 58 50 25 80",
+    "email": "nisi@google.org"
+  },
   {
     "name": "Vanna",
     "phone": "05 52 14 18 60",
@@ -186,7 +214,11 @@
     "phone": "02 57 17 76 04",
     "email": "erat.vitae@outlook.com"
   },
-  { "name": "Nola", "phone": "09 20 11 20 01", "email": "vitae@google.com" },
+  {
+    "name": "Nola",
+    "phone": "09 20 11 20 01",
+    "email": "vitae@google.com"
+  },
   {
     "name": "Kay",
     "phone": "09 11 48 67 03",
@@ -197,7 +229,11 @@
     "phone": "04 22 13 67 58",
     "email": "scelerisque.lorem@aol.ca"
   },
-  { "name": "Kay", "phone": "08 62 75 20 66", "email": "dui.nec@hotmail.edu" },
+  {
+    "name": "Kay",
+    "phone": "08 62 75 20 66",
+    "email": "dui.nec@hotmail.edu"
+  },
   {
     "name": "Rahim",
     "phone": "08 87 61 34 34",
@@ -213,14 +249,26 @@
     "phone": "07 25 78 16 52",
     "email": "suspendisse.aliquet@protonmail.org"
   },
-  { "name": "Xyla", "phone": "06 46 80 76 53", "email": "libero@icloud.edu" },
-  { "name": "Odette", "phone": "04 60 22 78 35", "email": "nam@google.edu" },
+  {
+    "name": "Xyla",
+    "phone": "06 46 80 76 53",
+    "email": "libero@icloud.edu"
+  },
+  {
+    "name": "Odette",
+    "phone": "04 60 22 78 35",
+    "email": "nam@google.edu"
+  },
   {
     "name": "Deanna",
     "phone": "07 54 53 01 40",
     "email": "arcu.morbi@google.edu"
   },
-  { "name": "Wang", "phone": "07 67 68 29 00", "email": "vel@google.org" },
+  {
+    "name": "Wang",
+    "phone": "07 67 68 29 00",
+    "email": "vel@google.org"
+  },
   {
     "name": "Buffy",
     "phone": "06 28 27 01 71",
@@ -241,7 +289,11 @@
     "phone": "04 67 57 75 24",
     "email": "mauris.blandit.mattis@google.couk"
   },
-  { "name": "Tanisha", "phone": "06 88 60 74 31", "email": "sem@aol.edu" },
+  {
+    "name": "Tanisha",
+    "phone": "06 88 60 74 31",
+    "email": "sem@aol.edu"
+  },
   {
     "name": "Colette",
     "phone": "03 03 26 75 72",
@@ -252,7 +304,11 @@
     "phone": "07 07 81 37 91",
     "email": "vel.est.tempor@icloud.net"
   },
-  { "name": "Kyra", "phone": "02 31 48 30 88", "email": "et.netus@yahoo.net" },
+  {
+    "name": "Kyra",
+    "phone": "02 31 48 30 88",
+    "email": "et.netus@yahoo.net"
+  },
   {
     "name": "Wyatt",
     "phone": "06 98 72 44 78",
@@ -263,7 +319,11 @@
     "phone": "05 14 94 82 85",
     "email": "dictum.cursus@outlook.com"
   },
-  { "name": "Velma", "phone": "07 61 15 61 48", "email": "ipsum@icloud.net" },
+  {
+    "name": "Velma",
+    "phone": "07 61 15 61 48",
+    "email": "ipsum@icloud.net"
+  },
   {
     "name": "Amir",
     "phone": "07 98 55 40 52",
@@ -274,7 +334,11 @@
     "phone": "04 97 78 58 68",
     "email": "vitae.risus@hotmail.org"
   },
-  { "name": "Xavier", "phone": "02 73 71 51 96", "email": "mi.duis@yahoo.net" },
+  {
+    "name": "Xavier",
+    "phone": "02 73 71 51 96",
+    "email": "mi.duis@yahoo.net"
+  },
   {
     "name": "Yoshio",
     "phone": "02 29 55 95 46",
@@ -290,7 +354,11 @@
     "phone": "08 55 61 62 24",
     "email": "ultrices.iaculis@aol.com"
   },
-  { "name": "Joseph", "phone": "02 77 65 14 17", "email": "eu@outlook.net" },
+  {
+    "name": "Joseph",
+    "phone": "02 77 65 14 17",
+    "email": "eu@outlook.net"
+  },
   {
     "name": "Britanney",
     "phone": "06 32 22 34 87",
@@ -316,7 +384,11 @@
     "phone": "02 11 12 41 31",
     "email": "risus.donec.egestas@outlook.net"
   },
-  { "name": "Amanda", "phone": "09 80 81 53 14", "email": "nibh@icloud.ca" },
+  {
+    "name": "Amanda",
+    "phone": "09 80 81 53 14",
+    "email": "nibh@icloud.ca"
+  },
   {
     "name": "Zenia",
     "phone": "07 91 76 66 53",
@@ -337,9 +409,21 @@
     "phone": "02 28 71 06 71",
     "email": "metus.aliquam@hotmail.com"
   },
-  { "name": "Denton", "phone": "08 31 51 61 72", "email": "libero@google.org" },
-  { "name": "Wade", "phone": "02 37 53 13 82", "email": "a@aol.edu" },
-  { "name": "Benjamin", "phone": "01 81 25 23 68", "email": "risus@yahoo.ca" },
+  {
+    "name": "Denton",
+    "phone": "08 31 51 61 72",
+    "email": "libero@google.org"
+  },
+  {
+    "name": "Wade",
+    "phone": "02 37 53 13 82",
+    "email": "a@aol.edu"
+  },
+  {
+    "name": "Benjamin",
+    "phone": "01 81 25 23 68",
+    "email": "risus@yahoo.ca"
+  },
   {
     "name": "Cain",
     "phone": "08 88 71 61 62",
@@ -350,9 +434,21 @@
     "phone": "03 26 14 51 03",
     "email": "tempus.non@icloud.edu"
   },
-  { "name": "Amir", "phone": "06 42 84 79 98", "email": "amet.massa@aol.org" },
-  { "name": "Felix", "phone": "05 32 18 74 31", "email": "vitae@hotmail.org" },
-  { "name": "Dale", "phone": "05 24 63 97 80", "email": "cursus@icloud.ca" },
+  {
+    "name": "Amir",
+    "phone": "06 42 84 79 98",
+    "email": "amet.massa@aol.org"
+  },
+  {
+    "name": "Felix",
+    "phone": "05 32 18 74 31",
+    "email": "vitae@hotmail.org"
+  },
+  {
+    "name": "Dale",
+    "phone": "05 24 63 97 80",
+    "email": "cursus@icloud.ca"
+  },
   {
     "name": "Hedy",
     "phone": "02 53 28 40 62",
@@ -378,7 +474,11 @@
     "phone": "05 19 24 62 60",
     "email": "molestie.arcu@aol.com"
   },
-  { "name": "Rhona", "phone": "03 98 89 66 54", "email": "semper.et@aol.couk" },
+  {
+    "name": "Rhona",
+    "phone": "03 98 89 66 54",
+    "email": "semper.et@aol.couk"
+  },
   {
     "name": "Rooney",
     "phone": "02 51 14 47 17",
@@ -389,6 +489,14 @@
     "phone": "07 14 49 72 87",
     "email": "tincidunt.aliquam@hotmail.net"
   },
-  { "name": "Laith", "phone": "08 33 28 12 43", "email": "sed@yahoo.couk" },
-  { "name": "Kirk", "phone": "02 84 91 34 33", "email": "consequat@aol.net" }
+  {
+    "name": "Laith",
+    "phone": "08 33 28 12 43",
+    "email": "sed@yahoo.couk"
+  },
+  {
+    "name": "Kirk",
+    "phone": "02 84 91 34 33",
+    "email": "consequat@aol.net"
+  }
 ]
