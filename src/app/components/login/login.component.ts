@@ -32,10 +32,12 @@ export class LoginComponent {
       this._router.navigate(['/todos',this.user.id]);
       return;  
     }
+    //http auth request
+    this._AuthService.addUser(form.value).subscribe((user : any) => {console.log(JSON.stringify(user));
+    })
     this.user={id: this.currentId, name:form.value.username, qoute:form.value.qoute, todos:[]};
     console.log(form.value);
     //@ts-ignore
-    this.users.push(this.user);
     localStorage.setItem('users' ,JSON.stringify(this.users));
     this._router.navigate(['/todos',this.user.id]);
   }
