@@ -9,7 +9,7 @@
   
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
   
-                  <form class="mx-1 mx-md-4" #form = 'ngForm' (ngSubmit)="submitForm()">
+                  <form class="mx-1 mx-md-4" #form = 'ngForm' (ngSubmit)="submitForm(form)">
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
@@ -42,10 +42,19 @@
                             </p>
                       </div>
                     </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" name="qoute" #qoute='ngModel' ngModel class="form-control" placeholder="Your Qoute" required/>
+                        <p class="text-danger"
+                            *ngIf="qoute.touched && qoute.errors?.['required']">
+                                The qoute is Required
+                            </p>
+                      </div>
+                    </div>
                     <div class="form-check d-flex justify-content-center mb-5">
-                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                       <label class="form-check-label" for="form2Example3">
-                        I agree all statements in <a href="#!">Terms of service</a>
+                        If you already have an Account <a [routerLink]="['/login']" >  Login</a>
                       </label>
                     </div>
   

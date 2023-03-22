@@ -9,8 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SingUpComponent } from './components/sing-up/sing-up.component';
-
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +23,7 @@ import { SingUpComponent } from './components/sing-up/sing-up.component';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
