@@ -27,6 +27,11 @@ export class LoginComponent {
       form.reset();
       return;
     }
+    if(this.users.findIndex(u => u.name == form.value.username)!==-1){
+      this.user = this.users[this.users.findIndex(user => user.name == form.value.username)];
+      this._router.navigate(['/todos',this.user.id]);
+      return;  
+    }
     this.user={id: this.currentId, name:form.value.username, qoute:form.value.qoute, todos:[]};
     console.log(form.value);
     //@ts-ignore

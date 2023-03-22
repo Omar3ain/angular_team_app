@@ -58,4 +58,8 @@ export class TodoInputComponent {
  getNewTodo(event : Todo) : void {
   this.updateTodos(event)
  }
+
+ ngOnInit() {
+  this.getTodos();
+ }
 }
