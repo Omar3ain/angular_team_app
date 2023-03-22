@@ -24,7 +24,8 @@ export class TodoItemComponent {
    }
   
    deleteTodo(id : number){
-    this.todo.isDeleted = true
+    this.todo.status = false;
+    this.todo.isDeleted = true;
    }
    getTodo() {
     this.returnTodo.emit(this.todo)

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import Todo from 'src/app/services/todoInterface';
 import User from 'src/app/services/userInterface';
@@ -15,8 +15,8 @@ export class NavbarComponent {
   userId:number=0;
   todos : Todo[]=[];
   name :string='random';
-  user : User ;
-  constructor(private _activatedRoute:ActivatedRoute,private _authService: AuthService){
+  user : User ={id:0,name:'random',qoute:'',todos:[]};
+  constructor(private _activatedRoute:ActivatedRoute,private _authService: AuthService,private _router:Router) {
     this.userId = Number(_activatedRoute.snapshot.params['id']);
     this.users = _authService.users;
     //@ts-ignore
@@ -31,11 +31,17 @@ export class NavbarComponent {
   }
 
   deletedNum(){
-    return this.todos.filter(todo=>todo.status===true).length;
+    return this.todos.filter(todo=>todo.isDeleted===true).length;
   }
 
   doneNum(){
-    return this.todos.filter(todo=>todo.status===true).length;
+    if(this.deletedNum()>=this.todos.length || this.todos.length==0)
+      return 0;
+    return (this.todos.filter(todo=>todo.status===true).length/(this.todos.length-this.deletedNum()))*100;
   }
+
+  logOut(){ 
+    this._router.navigate(['/login']);
+    }
 
 }

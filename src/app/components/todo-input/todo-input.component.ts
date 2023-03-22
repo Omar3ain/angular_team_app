@@ -18,14 +18,10 @@ export class TodoInputComponent {
   users :User[]= [];
   userId :number = 0;
   //@ts-ignore
-  user : User;
+  user : User={id:0,name:'random',qoute:'',todos:[]};
   constructor(private _activatedRoute: ActivatedRoute , private _authService: AuthService){
-    this.userId = Number(_activatedRoute.snapshot.params['id']);
+    this.userId = _activatedRoute.snapshot.params['id'];
     this.users = _authService.users;
-    //@ts-ignore
-    this.user = this.users.find((user) => user.id === this.userId);
-    
-    
   }
 
  addTodo() : void {
@@ -48,7 +44,7 @@ export class TodoInputComponent {
  updateTodos(todo:Todo){
   let todoIndex = this.todos.findIndex(t=>t.id===todo.id);
   // this.users.find((user) => user.id === Number(this.userId))?.todos=this.todos;
-  console.log(todoIndex);
+  // console.log(todoIndex);
   let user = this.users.find(u=>u.id===Number(this.userId));
   //@ts-ignore
   user.todos[todoIndex] = todo;
