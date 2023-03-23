@@ -5,7 +5,7 @@
       <label class="form-label" for="username">Username</label>
       <input name="username"  type="text" #username="ngModel" ngModel id="username" class="form-control"
         placeholder="Enter your username" required/>
-        <p *ngIf="username.touched && username.errors?.['required']" class="text-danger text-uppercase">username is
+        <p *ngIf="username.touched && username.errors?.['required']" class="text-danger">Username is
           required</p>
     </div>
 
@@ -13,24 +13,20 @@
     <div class="form-outline mb-4">
       <label class="form-label" for="password">Password</label>
       <input name="password"  type="password" #password="ngModel" ngModel  id="password" class="form-control"
-        placeholder="Enter your favoute quote" required>
-        <p *ngIf="password.touched && password.errors?.['required']" class="text-danger text-uppercase">password is
+        placeholder="Enter your password" required>
+        <p *ngIf="password.touched && password.errors?.['required']" class="text-danger">Password is
           required</p>
     </div>
-    <!-- 2 column grid layout for inline styling -->
     <div class="row mb-4">
-      <div class="col d-flex justify-content-center"></div>
-
-      <div class="col"></div>
+      <div class="col d-flex justify-content-center"><p *ngIf="notUser" style="color: #a12424;">User not Found please <a [routerLink]="['/signUp']">sign up</a></p></div>
     </div>
 
     <!-- Submit button -->
-    <button class="btn btn-primary btn-block mb-4 m-auto">
-      Sign in
-    </button>
-    <br>
-    <button [routerLink]="['/signUp']" class="btn btn-primary btn-block mb-4 m-auto">
+    <button  [routerLink]="['/signUp']" class="btn btn-primary btn-block mb-4 m-auto">
       Sign Up
+    </button>
+    <button style="margin-left: 19px !important;" class="btn btn-primary btn-block mb-4">
+      Log in
     </button>
   </form>
 </div>

@@ -12,6 +12,7 @@ export class LoginComponent {
   users : User[] = [];
   user : User = {} as User
   currentId : number = 0;
+  notUser : boolean = false;
   constructor(private _AuthService : AuthService ,private _router : Router){
     
     this.users  = this._AuthService.getUserInLocalStorage();
@@ -27,11 +28,13 @@ export class LoginComponent {
       this.user = this.users[this.users.findIndex(user => user.username == form.value.username)];
       this._router.navigate(['/todos',this.user.id]);
       return;  
+    }else{
+      this.notUser =true
     }
     
     //http auth request
-    // this._AuthService.addUser(form.value).subscribe((user : any) => {console.log(JSON.stringify(user));
-    // })
+   //this._AuthService.addUser(form.value).subscribe((user : any) => {console.log(JSON.stringify(user));
+     //})
     //this._router.navigate(['/todos',this.user.id]);
   }
   getUsers() : void{
