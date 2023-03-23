@@ -125,18 +125,3 @@
    -moz-transition: opacity .2s linear 0s;
    -webkit-transition: opacity .2s linear 0s;
 }
-
-
-
-
-/*Just some styles for Codepen preview*/
-body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  padding: 50px 100px;
-  max-width: 55.25em;
-  font-family: 'Open Sans', sans-serif;
-}
-
-h5, h6, .info_reveal a {
-  font-family: 'Open Sans Condensed', sans-serif;
-}
