@@ -13,7 +13,7 @@ export class MyInterceptorInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    request.clone({headers : request.headers.set('name', 'salah')});
-    return next.handle(request);
+    const req = request.clone({headers : request.headers.set('name', 'salah')});
+    return next.handle(req);
   }
 }
