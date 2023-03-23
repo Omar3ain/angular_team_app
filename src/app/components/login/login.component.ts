@@ -10,15 +10,11 @@ import { AuthService } from '../../services/auth.service'
 })
 export class LoginComponent {
   users : User[] = [];
-  user : User = {
-    id: 0,
-    name : '',
-    qoute : '',
-    todos : [],
-  }
+  user : User = {} as User
   currentId : number = 0;
   constructor(private _AuthService : AuthService ,private _router : Router){
-    this.users  = this._AuthService.users;
+    
+    this.users  = this._AuthService.getUserInLocalStorage();
   }
   loginUser(form:NgForm) : void{
     this.getUsers();
@@ -27,22 +23,18 @@ export class LoginComponent {
       form.reset();
       return;
     }
-    if(this.users.findIndex(u => u.name == form.value.username)!==-1){
-      this.user = this.users[this.users.findIndex(user => user.name == form.value.username)];
+    if(this.users.findIndex(u => u.username == form.value.username)!==-1){
+      this.user = this.users[this.users.findIndex(user => user.username == form.value.username)];
       this._router.navigate(['/todos',this.user.id]);
       return;  
     }
     //http auth request
-    this._AuthService.addUser(form.value).subscribe((user : any) => {console.log(JSON.stringify(user));
-    })
-    this.user={id: this.currentId, name:form.value.username, qoute:form.value.qoute, todos:[]};
-    console.log(form.value);
-    //@ts-ignore
-    localStorage.setItem('users' ,JSON.stringify(this.users));
-    this._router.navigate(['/todos',this.user.id]);
+    // this._AuthService.addUser(form.value).subscribe((user : any) => {console.log(JSON.stringify(user));
+    // })
+    //this._router.navigate(['/todos',this.user.id]);
   }
   getUsers() : void{
-    this.users  = this._AuthService.users;
+    this.users  = this._AuthService.getUserInLocalStorage();
     this.currentId = this.users.length === 0 ? 1 :this.users[this.users.length -1 ].id +1;
   }
 
