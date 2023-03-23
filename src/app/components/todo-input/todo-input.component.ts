@@ -10,55 +10,61 @@ import  Todo  from '../../services/todoInterface';
   styleUrls: ['./todo-input.component.css']
 })
 export class TodoInputComponent {
-  title: string =''; 
-  //@ts-ignore
-  todo:Todo;
+  title = '';
+  todo: Todo = {} as Todo;
   todos: Todo[] = [];
-  currentId :number = 0;
-  users :User[]= [];
-  userId :number = 0;
-  //@ts-ignore
-  user : User={id:0,name:'random',qoute:'',todos:[]};
-  constructor(private _activatedRoute: ActivatedRoute , private _authService: AuthService){
-    this.userId = _activatedRoute.snapshot.params['id'];
-    this.users = _authService.users;
+  currentId = 0;
+  users: User[] = [];
+  user: User = { id: 0, name: 'random', qoute: '', todos: [] };
+  userId = 0;
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private authService: AuthService
+  ) {
+    this.userId = Number(this.activatedRoute.snapshot.params['id']);
+    this.users = this.authService.users;
   }
 
- addTodo() : void {
-  if(this.title){
+  addTodo(): void {
+    if (!this.title) return;
     this.getTodos();
-    let todo : Todo = {id: this.currentId ,title: this.title, status: false , isFav : false , isDeleted : false};
-    // console.log(this.users);
-    //@ts-ignore
-    
-    this.user = this.users.find((user) => user.id === Number(this.userId));
+    const todo: Todo = {
+      id: this.currentId,
+      title: this.title,
+      status: false,
+      isFav: false,
+      isDeleted: false,
+    };
+    this.user = this.users.find((user) => user.id === this.userId) || {} as User;
+
+    if (!this.user) return;
+
     this.todos.push(todo);
-    //@ts-ignore
-  this.user.todos = this.todos;
-  //@ts-ignore
-  this.users[this.users.findIndex((user) => user.id === Number(this.userId))] = this.user;
-  localStorage.setItem('users', JSON.stringify(this.users));
+    this.user.todos = this.todos;
+    this.users[this.users.findIndex((user) => user.id === this.userId)] = this.user;
+    localStorage.setItem('users', JSON.stringify(this.users));
     this.title = '';
   }
- }
- updateTodos(todo:Todo){
-  let todoIndex = this.todos.findIndex(t=>t.id===todo.id);
-  // this.users.find((user) => user.id === Number(this.userId))?.todos=this.todos;
-  // console.log(todoIndex);
-  let user = this.users.find(u=>u.id===Number(this.userId));
-  //@ts-ignore
-  user.todos[todoIndex] = todo;
-  localStorage.setItem('users', JSON.stringify(this.users));
- }
- getTodos() : void{
-   //@ts-ignore
-  this.todos = this.users.find(u => u.id === Number(this.userId)).todos;
-  this.currentId =this.todos.length === 0 ? 1 : this.todos[this.todos.length -1 ].id +1;
- }
- getNewTodo(event : Todo) : void {
-  this.updateTodos(event)
- }
 
+  updateTodos(todo: Todo): void {
+    const todoIndex = this.todos.findIndex((t) => t.id === todo.id);
+    if (todoIndex < 0) return; // Todo not found
+    const user = this.users.find((u) => u.id === this.userId);
+    if (!user) return; // User not found
+    user.todos[todoIndex] = todo;
+    localStorage.setItem('users', JSON.stringify(this.users));
+  }
+
+  getNewTodo(event : Todo) : void {
+    this.updateTodos(event)
+  }
+  
+  private getTodos() : void{
+   this.todos = this.users.find(u => u.id === this.userId)?.todos || [];
+   this.currentId =this.todos.length === 0 ? 1 : this.todos[this.todos.length -1 ].id +1;
+  }
+  
  ngOnInit() {
   this.getTodos();
  }
