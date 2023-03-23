@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutusComponent } from './aboutus/aboutus.component';
 import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { SingUpComponent } from './components/sing-up/sing-up.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signUp', component: SingUpComponent},
   {path: 'todos/:id' , component : TodoInputComponent},
+  {path: 'aboutus' , component : AboutusComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

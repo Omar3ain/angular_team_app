@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SingUpComponent } from './components/sing-up/sing-up.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyInterceptorInterceptor } from './my-interceptor.interceptor';
+import { AboutusComponent } from './aboutus/aboutus.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { MyInterceptorInterceptor } from './my-interceptor.interceptor';
     TodoItemComponent,
     NavbarComponent,
     SingUpComponent,
+    AboutusComponent,
   ],
   imports: [
     FormsModule,
