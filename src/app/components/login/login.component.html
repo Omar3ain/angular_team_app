@@ -12,8 +12,8 @@
     <!-- password input -->
     <div class="form-outline mb-4">
       <label class="form-label" for="password">Password</label>
-      <textarea name="password"  type="password" #password="ngModel" ngModel  id="password" class="form-control"
-        placeholder="Enter your favoute quote" required></textarea>
+      <input name="password"  type="password" #password="ngModel" ngModel  id="password" class="form-control"
+        placeholder="Enter your favoute quote" required>
         <p *ngIf="password.touched && password.errors?.['required']" class="text-danger text-uppercase">password is
           required</p>
     </div>

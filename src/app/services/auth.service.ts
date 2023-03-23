@@ -26,8 +26,8 @@ export class AuthService {
     data.id =  this.currentId;
     usersArray.push(data);
     localStorage.setItem('users', JSON.stringify(usersArray)); 
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this._http.post('https://dummyjson.com/users/add' , data ,{headers} )
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    // return this._http.post('https://dummyjson.com/users/add' , data ,{headers} )
    }
 
    isUser(body : any) {

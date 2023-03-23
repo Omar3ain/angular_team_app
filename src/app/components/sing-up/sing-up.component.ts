@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './sing-up.component.html',
   styleUrls: ['./sing-up.component.css']
 })
+
 export class SingUpComponent {
   @ViewChild('form') mySingUpForm:NgModel | undefined;
 
@@ -16,14 +17,12 @@ export class SingUpComponent {
   submitForm(form : any){
     // console.log(this.mySingUpForm);
     this._router.navigate(['../login']);
-    console.log(form.value);
-    this._auth.addUser(form.value ).subscribe((user) => {
-      console.log(user);
-      
-    })
-    this._auth.getUsers().subscribe((res:any)=>{
-      console.log(res.users);
-    });
+    this._auth.addUser(form.value);
+    // console.log(form.value);
+    // this._auth.getUsers().subscribe((res:any)=>{
+    //   console.log(res.users);
+    // });
+
   }
 
 }
