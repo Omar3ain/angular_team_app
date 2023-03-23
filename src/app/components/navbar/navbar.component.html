@@ -14,12 +14,12 @@
             <li class="nav-item me-3">
                 {{user.username}}
               </li>
-              <li class="nav-item me-3">
+              <li (click)="getfav()" class="cursor nav-item me-3">
                 <i class="bi bi-star-fill"></i>
                 <span>{{favNum()}}</span>
               </li>
               
-              <li class="nav-item me-3">
+              <li (click)="getDeleted()" class="cursor nav-item me-3">
                 <i class="bi bi-trash"></i>
                 <span>{{deletedNum()}}</span>
               </li>

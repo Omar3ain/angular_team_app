@@ -28,6 +28,7 @@ export class LoginComponent {
       this._router.navigate(['/todos',this.user.id]);
       return;  
     }
+    
     //http auth request
     // this._AuthService.addUser(form.value).subscribe((user : any) => {console.log(JSON.stringify(user));
     // })

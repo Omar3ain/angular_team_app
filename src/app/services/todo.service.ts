@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable ,EventEmitter} from '@angular/core';
 import User from './userInterface';
 import Todo from './todoInterface';
+import { Conditional } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,8 @@ import Todo from './todoInterface';
 export class TodoService {
   private currentId = 0;
   private users: User[] = [];
+  public showCondition :string=""; 
+  buttonClicked =new EventEmitter();
 
   constructor() {
     
@@ -44,7 +47,15 @@ export class TodoService {
     this.getUsers();
     const user = this.users.find(u => u.id === userId);
     this.currentId = user?.todos ? user.todos.length +1 : 1;
-    return user ? user.todos : [];
+    switch(this.showCondition){
+      case 'Fav':
+      return user ? user.todos.filter(t => t.isFav===true):[];
+      case 'Deleted':
+        return user? user.todos.filter(t => t.isDeleted===true):[];
+      default :
+        return user ? user.todos.filter(todo=>!todo.isDeleted===true) : [];
+
+    }
   }
   private getUsers(): void {
     this.users = JSON.parse(localStorage.getItem('users') || '[]');

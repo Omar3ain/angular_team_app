@@ -1,4 +1,5 @@
 import { Component ,Input , EventEmitter, Output} from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 import User from 'src/app/services/userInterface';
 import Todo from '../../services/todoInterface';
 
@@ -16,7 +17,11 @@ export class TodoItemComponent {
     isDeleted : false
   };
   @Output() returnTodo = new EventEmitter<Todo>();
+  constructor(private _todoservice:TodoService){
 
+  }
+  
+  // condition: boolean = eval("!this."+this._todoservice.showCondition); 
 
 
   changeStatus(id : number): void {
@@ -26,8 +31,16 @@ export class TodoItemComponent {
    deleteTodo(id : number){
     this.todo.status = false;
     this.todo.isDeleted = true;
+    
+    // this._todoservice.showCondition='';
+    // this._todoservice.buttonClicked.emit();
    }
    getTodo() {
+    // this.condition=eval(this._todoservice.showCondition);
     this.returnTodo.emit(this.todo)
+   }
+
+   ngOnInit() {
+    // this.condition=eval(this._todoservice.showCondition);
    }
 }

@@ -11,7 +11,7 @@ import  Todo  from '../../services/todoInterface';
 })
 export class TodoInputComponent {
   title = '';
-  todo: Todo = {} as Todo;
+  // todo: Todo = {} as Todo;
   todos: Todo[] = [];
   currentId = 0;
   users: User[] = [];
@@ -23,10 +23,14 @@ export class TodoInputComponent {
     private todoService: TodoService
   ) {
     this.userId = Number(this.activatedRoute.snapshot.params['id']);
+    this.todoService.buttonClicked.subscribe(()=>{
+      this.getTodos();
+    })
   }
 
   addTodo(): void {
     this.todoService.addTodoToUser(this.userId, this.title);
+    this.todoService.showCondition='';
     this.getTodos();
     this.title = '';
   }
@@ -37,6 +41,8 @@ export class TodoInputComponent {
 
   getNewTodo(event : Todo) : void {
     this.updateTodos(event)
+    this.todoService.showCondition='';
+    this.todoService.buttonClicked.emit();
   }
   
   private getTodos(): void {
