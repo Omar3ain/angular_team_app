@@ -9,7 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SingUpComponent } from './components/sing-up/sing-up.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyInterceptorInterceptor } from './my-interceptor.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptorInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
