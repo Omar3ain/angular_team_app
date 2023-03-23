@@ -41,7 +41,7 @@ export class NavbarComponent implements OnInit {
     this.getUsers()
     if(this.deletedNum()>=this.todos.length || this.todos.length==0)
       return 0;
-    return (this.todos.filter(todo=>todo.status===true).length/(this.todos.length-this.deletedNum()))*100;
+    return Math.floor((this.todos.filter(todo=>todo.status===true).length/(this.todos.length-this.deletedNum()))*100);
   }
 
   logOut(){ 

@@ -30,4 +30,7 @@ export class TodoItemComponent {
    getTodo() {
     this.returnTodo.emit(this.todo)
    }
+   favTodo(id : number){
+    this.todo.isFav =!this.todo.isFav;
+   }
 }
