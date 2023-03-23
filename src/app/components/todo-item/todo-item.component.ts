@@ -39,8 +39,7 @@ export class TodoItemComponent {
     // this.condition=eval(this._todoservice.showCondition);
     this.returnTodo.emit(this.todo)
    }
-
-   ngOnInit() {
-    // this.condition=eval(this._todoservice.showCondition);
+   favTodo(id : number){
+    this.todo.isFav =!this.todo.isFav;
    }
 }
