@@ -5,6 +5,7 @@
   <div class=" d-flex align-items-center justify-content-around">
 
     <h1>About Us:</h1>
+    
     <ul class="responsive_grid">
       <li *ngFor="let one of us">
         <div class="team_member">
@@ -22,4 +23,7 @@
       </li>
     </ul>
   </div>
+  <button (click)="backLogin()" style="margin-left: 19px !important;" class="btn btn-primary btn-block mb-2">
+    Back
+  </button>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-aboutus',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./aboutus.component.css']
 })
 export class AboutusComponent {
+  constructor(private _router:Router ) {
+  }
   us = [
     {
       name : 'Muammed osama',
@@ -14,7 +17,7 @@ export class AboutusComponent {
       number : '01015390878'
     },
     {
-      name : 'Muahmmed salah',
+      name : 'mohamed salah',
       job : 'Software Engineer',
       email: 'mohamedsalahmasoud173@gmail.com',
       number : '01127588096'
@@ -28,4 +31,8 @@ export class AboutusComponent {
       
     },
   ]
+  backLogin(){
+    this._router.navigate(['/login']);
+  }
+  
 }

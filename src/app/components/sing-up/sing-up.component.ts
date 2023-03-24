@@ -15,14 +15,8 @@ export class SingUpComponent {
 
   }
   submitForm(form : any){
-    // console.log(this.mySingUpForm);
     this._router.navigate(['../login']);
     this._auth.addUser(form.value);
-    // console.log(form.value);
-    // this._auth.getUsers().subscribe((res:any)=>{
-    //   console.log(res.users);
-    // });
-
   }
 
 }

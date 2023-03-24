@@ -45,6 +45,9 @@ export class LoginComponent {
   signUp() {
     this._router.navigate(['/signup']);
   }
+  aboutus(){
+    this._router.navigate(['../aboutus'])
+  }
 
   ngOnInit() : void {
     if(!localStorage.getItem('users')){
