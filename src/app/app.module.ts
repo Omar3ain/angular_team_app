@@ -12,6 +12,7 @@ import { SingUpComponent } from './components/sing-up/sing-up.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyInterceptorInterceptor } from './my-interceptor.interceptor';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptorInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptorInterceptor, multi: true },
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
