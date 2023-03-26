@@ -8,3 +8,9 @@
 #list1 .select-input.form-control[readonly]:not([disabled]) {
   background-color: #fbfbfb;
 }
+.label{
+  color:rgb(33 113 197); 
+  font-size: 15px; 
+  position: relative; 
+  bottom: 5px;
+}
